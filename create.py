@@ -76,3 +76,11 @@ def intrinsics_multi_constructor(loader, tag_prefix, node):
         value = loader.construct_mapping(node)
 
     return {cfntag: value}
+def yaml_dump(dict_to_dump):
+    """
+    Dumps the dictionary as a YAML document
+    :param dict_to_dump:
+    :return:
+    """
+    return yaml.safe_dump(dict_to_dump, default_flow_style=False)
+
